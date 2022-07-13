@@ -15,6 +15,7 @@ from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
 from ..decorators import teacher_required
 from ..forms import BaseAnswerInlineFormSet, QuestionForm, TeacherSignUpForm
 from ..models import Answer, Question, Quiz
+from django.views.generic import TemplateView
 
 User = get_user_model()
 
@@ -214,3 +215,6 @@ class QuestionDeleteView(DeleteView):
     def get_success_url(self):
         question = self.get_object()
         return reverse('teachers:quiz_change', kwargs={'pk': question.quiz_id})
+
+class CalendarView(TemplateView):
+    template_name = 'classroom/teachers/calendar.html'

@@ -8,26 +8,66 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - piland
+  - math
+  - science
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey! what would you prefer:"
+    buttons:
+      - title: "About us"
+        payload: "piland"
+
+      - title: "math"
+        payload: "math"
+
+      - title: "science"
+        payload: "science"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "No"
 
   utter_did_that_help:
   - text: "Did that help you?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Yes, great"
 
   utter_goodbye:
   - text: "Bye"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_piland:
+  - text: "piland is a pi story technology for kids"
+
+  utter_math:
+  - text: "what's the result of 160+5"
+    buttons:
+      - title: "170"
+        payload: "math"
+
+      - title: "165"
+        payload: "affirm"
+
+      - title: "180"
+        payload: "math"
+
+  utter_science:
+  - text: "Which of the following is not a blood type?"
+    buttons:
+      - title: "A"
+        payload: "science"
+
+      - title: "B"
+        payload: "science"
+
+      - title: "C"
+        payload: "affirm"
+
+
 
 session_config:
   session_expiration_time: 60

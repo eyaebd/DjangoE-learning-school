@@ -40,10 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-
     'crispy_forms',
-
     'classroom',
+    'webpush',
 ]
 
 MIDDLEWARE = [
@@ -55,6 +54,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+WEBPUSH_SETTINGS = {
+   "VAPID_PUBLIC_KEY": "your_vapid_public_key",
+   "VAPID_PRIVATE_KEY": "your_vapid_private_key",
+   "VAPID_ADMIN_EMAIL": "abidiamira709@gmail.com"
+}
 
 ROOT_URLCONF = 'django_school.urls'
 

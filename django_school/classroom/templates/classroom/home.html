@@ -1,425 +1,497 @@
-{% block content %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<!doctype html>
+<html lang="en-US">
+	<head>
 
-    <title>E-learning for kids</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
-    <link rel="stylesheet" href="static/css/all.min.css" />
-    <link rel="stylesheet" href="static/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="static/slick/slick.css"/>
-    <link rel="stylesheet" href="static/slick/slick-theme.css"/>
-    <link rel="stylesheet" href="static/css/magnific-popup.css">
-    <link rel="stylesheet" href="static/css/templatemo-dream-pulse.css" />
-  </head>
-  <body>
-    <main class="container-fluid">
-      <div class="row">
-          <nav id="tmSidebar" class="tm-bg-black-transparent tm-sidebar">
-            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
-              <i class="fas fa-bars"></i>
-            </button>
-            <div class="tm-sidebar-sticky">
-              <div class="tm-brand-box">
-                <div class="tm-double-border-1">
-                  <div class="tm-double-border-2">
-                    <h1 class="tm-brand text-uppercase">Piland</h1>
-                  </div>
-                </div>
-              </div>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Piland school</title>
+		<meta name="description" content="Unika - Responsive One Page HTML5 Template">
+		<meta name="keywords" content="HTML5, Bootsrtrap, One Page, Responsive, Template, Portfolio" />
+		<meta name="author" content="imransdesign.com">
 
-              <ul id="tmMainNav" class="nav flex-column text-uppercase text-right tm-main-nav">
-                <li class="nav-item">
-                  <a href="#intro" class="nav-link active">
-                    <span class="d-inline-block mr-3">Intro</span>
-                    <span class="d-inline-block tm-white-rect"></span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#about" class="nav-link">
-                    <span class="d-inline-block mr-3">About</span>
-                    <span class="d-inline-block tm-white-rect"></span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#work" class="nav-link">
-                    <span class="d-inline-block mr-3">Work</span>
-                    <span class="d-inline-block tm-white-rect"></span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#clients" class="nav-link">
-                    <span class="d-inline-block mr-3">Clients</span>
-                    <span class="d-inline-block tm-white-rect"></span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#talk" class="nav-link">
-                    <span class="d-inline-block mr-3">Let's Talk</span>
-                    <span class="d-inline-block tm-white-rect"></span>
-                  </a>
-                </li>
-              </ul>
-              <ul class="nav flex-row tm-social-links">
-                <li class="nav-item">
-                  <a href="https://facebook.com" class="nav-link tm-social-link">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://twitter.com" class="nav-link tm-social-link">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://dribbble.com" class="nav-link tm-social-link">
-                    <i class="fab fa-dribbble"></i>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://linkedin.com" class="nav-link tm-social-link">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
-              </ul>
-              <footer class="text-center text-white small">
-                <p class="mb--0 mb-2">Copyright 2020 Dream Pulse</p>
-                <p class="mb-0">Design:
-                  <a rel="nofollow" href="https://templatemo.com" class="tm-footer-link">Template Mo</a>
-                </p>
-              </footer>
-            </div>
-          </nav>
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-          <main role="main" class="ml-sm-auto col-12">
-            <div
-              class="parallax-window"
-              data-parallax="scroll"
-              data-image-src="static/img/dream-pulse-header.jpg">
-              <div class="tm-section-wrap">
-                 <section id="intro" class="tm-section">
-                    <div class="tm-bg-white-transparent tm-intro">
-                            <div>
-                            <a href="{% url 'login' %}" id="neonShadow" class="btn btn-teacher btn-lg" role="button">Sign In</a>
-                            <a href="{% url 'signup' %}" id="neonShadow" class="btn btn-teacher btn-lg" role="button">Sign Up</a>
-                           </div>
+        <!-- Google Fonts  -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'> <!-- Body font -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'> <!-- Navbar font -->
+
+		<!-- Libs and Plugins CSS -->
+		<link rel="stylesheet" href="static/inc/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="static/inc/animations/css/animate.min.css">
+		<link rel="stylesheet" href="static/inc/font-awesome/css/font-awesome.min.css"> <!-- Font Icons -->
+		<link rel="stylesheet" href="static/inc/owl-carousel/css/owl.carousel.css">
+		<link rel="stylesheet" href="static/inc/owl-carousel/css/owl.theme.css">
+
+		<!-- Theme CSS -->
+        <link rel="stylesheet" href="static/css/reset.css">
+		<link rel="stylesheet" href="static/css/style.css">
+		<link rel="stylesheet" href="static/css/mobile.css">
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="static/css/skin/cool-gray.css">
+
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+
+    <body data-spy="scroll" data-target="#main-navbar">
+        <div class="page-loader"></div>  <!-- Display loading image while page loads -->
+    	<div class="body">
+
+            <!--========== BEGIN HEADER ==========-->
+            <header id="header" class="header-main">
+
+                <!-- Begin Navbar -->
+                <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation"> <!-- Classes: navbar-default, navbar-inverse, navbar-fixed-top, navbar-fixed-bottom, navbar-transparent. Note: If you use non-transparent navbar, set "height: 98px;" to #header -->
+
+                  <div class="container">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <img src="static/img/piland.png" alt="piland logo" class="img-fluid" style="width:80px; height:80px">
                     </div>
-                </section>
-            </div>
-          </div>
 
-          <div class="tm-section-wrap bg-white">
-            <section id="about" class="row tm-section">
-              <div class="col-xl-6">
-                <div class="tm-section-half">
-                    <div><i class="fas fa-6x fa-balance-scale mb-5 tm-section-icon"></i></div>
-                    <h2 class="tm-section-title tm-color-primary mb-5">About Us</h2>
-                    <p class="mb-5">
-                      When first section is scrolled up, BG image will be
-                      disappeared with a parallax effect. Donec ac tempor tellus, a
-                      eleifend ligula. Fusce vitae sem sed purus euismod
-                      condimentum.
-                    </p>
-                    <p>
-                      Sed at orci non metus tristique suscipit vitae in nibh. Sed
-                      rutrum odio ac est hendrerit, at vestibulum felis condimentum.
-                    </p>
-                </div>
-              </div>
-              <div class="col-xl-6">
-                <div class="tm-section-half">
-                    <div><i class="far fa-6x fa-building mb-5 tm-section-icon"></i></div>
-                    <h2 class="tm-section-title tm-color-primary mb-5">Company Profile</h2>
-                    <p class="mb-5">
-                      You can use this template for your commercial websites or for your clients.
-                      You are NOT allowed to re-post this template as a downloadable ZIP file
-                      on your template collection sites. It is illegal.
-                    </p>
-                    <p>
-                      Suspendisse fermentum orci eget lorem euismod suscipit. Morbi
-                      condimentum odio metus, at finibus dolor sollicitudin quis.
-                      Curabitur eu congue erat.
-                    </p>
-                </div>
-              </div>
-            </section>
-          </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a class="page-scroll" href="body">Home</a></li>
+                            <li><a class="page-scroll" href="{% url 'login' %}">Login</a></li>
+                            <li><a class="page-scroll" href="#about-section">About</a></li>
+                            <li><a class="page-scroll" href="#services-section">Services</a></li>
+                            <li><a class="page-scroll" href="#contact-section">Contact</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container -->
+                </nav>
+                <!-- End Navbar -->
 
-          <div class="tm-section-wrap bg-white">
-            <section id="work" class="row tm-section">
-              <div class="col-12">
-                <div class="w-100 tm-double-border-1 tm-border-gray">
-                    <div class="tm-double-border-2 tm-border-gray tm-box-pad">
-                      <div class="tm-gallery-wrap">
-                          <h2 class="tm-color-primary tm-section-title mb-4 ml-2">Our Work</h2>
-                          <div class="tm-gallery">
-                            <div class="tm-gallery-item">
-                              <figure class="effect-bubba">
-                                <img src="static/img/gallery/01.jpg" alt="Our Work Image" class="img-fluid">
-                                <figcaption>
-                                  <h2>Fresh <span>Bubba</span></h2>
-                                  <p>Bubba likes to appear out of thin air.</p>
-                                  <a href="static/img/gallery/large/01.jpg">View more</a>
-                                </figcaption>
-                              </figure>
-                            </div>
-                            <div class="tm-gallery-item">
-                              <figure class="effect-bubba">
-                                <img src="static/img/gallery/02.jpg" alt="Our Work Image" class="img-fluid">
-                                <figcaption>
-                                  <h2>Fresh <span>Bubba</span></h2>
-                                  <p>Bubba likes to appear out of thin air.</p>
-                                  <a href="static/img/gallery/large/02.jpg">View more</a>
-                                </figcaption>
-                              </figure>
-                            </div>
-                            <div class="tm-gallery-item">
-                              <figure class="effect-bubba">
-                                <img src="static/img/gallery/03.jpg" alt="Our Work Image" class="img-fluid">
-                                <figcaption>
-                                  <h2>Fresh <span>Bubba</span></h2>
-                                  <p>Bubba likes to appear out of thin air.</p>
-                                  <a href="static/img/gallery/large/03.jpg">View more</a>
-                                </figcaption>
-                              </figure>
-                            </div>
-                            <div class="tm-gallery-item">
-                              <figure class="effect-bubba">
-                                <img src="static/img/gallery/04.jpg" alt="Our Work Image" class="img-fluid">
-                                <figcaption>
-                                  <h2>Fresh <span>Bubba</span></h2>
-                                  <p>Bubba likes to appear out of thin air.</p>
-                                  <a href="static/img/gallery/large/04.jpg">View more</a>
-                                </figcaption>
-                              </figure>
-                            </div>
-                            <div class="tm-gallery-item">
-                              <figure class="effect-bubba">
-                                <img src="static/img/gallery/05.jpg" alt="Our Work Image" class="img-fluid">
-                                <figcaption>
-                                  <h2>Fresh <span>Bubba</span></h2>
-                                  <p>Bubba likes to appear out of thin air.</p>
-                                  <a href="static/img/gallery/large/05.jpg">View more</a>
-                                </figcaption>
-                              </figure>
-                            </div>
-                            <div class="tm-gallery-item">
-                              <figure class="effect-bubba">
-                                <img src="static/img/gallery/06.jpg" alt="Our Work Image" class="img-fluid">
-                                <figcaption>
-                                  <h2>Fresh <span>Bubba</span></h2>
-                                  <p>Bubba likes to appear out of thin air.</p>
-                                  <a href="static/img/gallery/large/06.jpg">View more</a>
-                                </figcaption>
-                              </figure>
-                            </div>
-                            <div class="tm-gallery-item">
-                              <figure class="effect-bubba">
-                                <img src="static/img/gallery/07.jpg" alt="Our Work Image" class="img-fluid">
-                                <figcaption>
-                                  <h2>Fresh <span>Bubba</span></h2>
-                                  <p>Bubba likes to appear out of thin air.</p>
-                                  <a href="static/img/gallery/large/07.jpg">View more</a>
-                                </figcaption>
-                              </figure>
-                            </div>
-                            <div class="tm-gallery-item">
-                              <figure class="effect-bubba">
-                                <img src="static/img/gallery/08.jpg" alt="Our Work Image" class="img-fluid">
-                                <figcaption>
-                                  <h2>Fresh <span>Bubba</span></h2>
-                                  <p>Bubba likes to appear out of thin air.</p>
-                                  <a href="static/img/gallery/large/08.jpg">View more</a>
-                                </figcaption>
-                              </figure>
-                            </div>
-                          </div>
-                      </div>
+            </header>
+            <!-- ========= END HEADER =========-->
+
+
+
+
+        	<!-- Begin text carousel intro section -->
+			<section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(static/img/slider-bg.png);">
+
+				<div class="container">
+					<div class="caption text-center text-white" data-stellar-ratio="0.7">
+
+						<div id="owl-intro-text" class="owl-carousel">
+							<div class="item">
+								<h1>We have Awesome things for you</h1>
+								<p>Let's make the school beautiful together</p>
+                                <div class="extra-space-l"></div>
+								<a class="btn btn-blank" href="#" target="_blank" role="button">View More!</a>
+							</div>
+							<div class="item">
+								<h1>Join with us</h1>
+								<p>To the greatest Quiz</p>
+								<div class="extra-space-l"></div>
+								<a class="btn btn-blank" href="#" target="_blank" role="button">View More!</a>
+							</div>
+							<div class="item">
+								<h1>I'm Piland school</h1>
+								<p>E-learning for kids</p>
+								<div class="extra-space-l"></div>
+								<a class="btn btn-blank" href="http://piland.tn/" target="_blank" role="button">View More!</a>
+							</div>
+						</div>
+
+					</div> <!-- /.caption -->
+				</div> <!-- /.container -->
+
+			</section>
+			<!-- End text carousel intro section -->
+
+
+
+
+            <!-- Begin about section -->
+			<section id="about-section" class="page bg-style1">
+                <!-- Begin page header-->
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+                            <h2>About</h2>
+                            <div class="devider"></div>
+                            <p class="subtitle">little information</p>
+                        </div>
                     </div>
-                  </div>
-              </div>
-            </section>
-          </div>
+                </div>
+                <!-- End page header-->
 
-          <div class="tm-section-wrap bg-white">
-            <section id="clients" class="row tm-section">
-              <div class="col-12 tm-section-pad">
-                  <div class="tm-flex-item-left">
-                      <div class="tm-w-80">
-                          <h2 class="tm-color-primary tm-section-title mb-4">Our Clients</h2>
-                          <p class="mb-5">
-                            Aenean est augue, iaculis ut arcu a, cursus tempus eros.
-                            Maecenas ut efficitur lectus, vel commodo nibh. Vivamus
-                            consequat massa non euismod facilisis. Morbi assumsan non libero
-                            a vehicula. Donec blandit suscipit magna sit amet elementum.
-                          </p>
-                      </div>
+                <!-- Begin rotate box-1 -->
+                <div class="rotate-box-1-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
+                                    <span class="rotate-box-icon"><i class="fa fa-users"></i></span>
+                                    <div class="rotate-box-info">
+                                        <h4>Who We Are?</h4>
+                                        <p>Piland technology for kids.</p>
+                                    </div>
+                                </a>
+                            </div>
 
-                      <div class="row tm-clients-images">
-                        <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap">
-                          <a href="https://google.com">
-                            <img src="static/img/client-1.png" alt="Client Image" class="img-fluid tm-client-img" />
-                          </a>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap">
-                          <a href="https://facebook.com">
-                            <img src="static/img/client-2.png" alt="Client Image" class="img-fluid tm-client-img" />
-                          </a>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap">
-                          <a href="https://twitter.com">
-                            <img src="static/img/client-3.png" alt="Client Image" class="img-fluid tm-client-img" />
-                          </a>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap">
-                          <a href="https://instagram.com">
-                            <img src="static/img/client-4.png" alt="Client Image" class="img-fluid tm-client-img" />
-                          </a>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap">
-                            <a href="https://google.com">
-                              <img src="static/img/client-5.png" alt="Client Image" class="img-fluid tm-client-img" />
-                            </a>
-                          </div>
-                          <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap">
-                            <a href="https://facebook.com">
-                              <img src="static/img/client-6.png" alt="Client Image" class="img-fluid tm-client-img" />
-                            </a>
-                          </div>
-                          <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap">
-                            <a href="https://twitter.com">
-                              <img src="static/img/client-7.png" alt="Client Image" class="img-fluid tm-client-img" />
-                            </a>
-                          </div>
-                          <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 tm-img-wrap">
-                            <a href="https://instagram.com">
-                              <img src="static/img/client-8.png" alt="Client Image" class="img-fluid tm-client-img" />
-                            </a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-            </section>
-          </div>
+                            <div class="col-md-3 col-sm-6">
+                                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.2s">
+                                    <span class="rotate-box-icon"><i class="fa fa-diamond"></i></span>
+                                    <div class="rotate-box-info">
+                                        <h4>What We Do?</h4>
+                                        <p>Robotics training, drawing competition, intelligence test.</p>
+                                    </div>
+                                </a>
+                            </div>
 
-          <div class="tm-section-wrap bg-white">
-            <section id="talk" class="row tm-section">
-                <div class="col-xl-6 mb-5">
-                  <div class="tm-double-border-1 tm-border-gray">
-                    <div class="tm-double-border-2 tm-border-gray tm-box-pad">
-                        <h2 class="tm-color-primary tm-section-title mb-4">Talk to Us</h2>
-                        <p class="mb-4">
-                          Sed aliquet, nibh ac hendrerit faucibus, tellus metus viverra
-                          tellus, vel volutpat purus orci ac ex.
-                        </p>
-                        <p class="mb-3">
-                          120-240 Orci varius natoque penatibus, <br>
-                          parturient montes, 10660 <br>
-                          nasvetur ridiculus mus
-                        </p>
+                            <div class="col-md-3 col-sm-6">
+                                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.4s">
+                                    <span class="rotate-box-icon"><i class="fa fa-heart"></i></span>
+                                    <div class="rotate-box-info">
+                                        <h4>Why We Do It?</h4>
+                                        <p>For education and entertainment.</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6">
+                                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.6s">
+                                    <span class="rotate-box-icon"><i class="fa fa-clock-o"></i></span>
+                                    <div class="rotate-box-info">
+                                        <h4>When?</h4>
+                                        <p>On holidays and free time.</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div> <!-- /.row -->
+                    </div> <!-- /.container -->
+                </div>
+                <!-- End rotate box-1 -->
+
+                <div class="extra-space-l"></div>
+
+                <!-- Begin page header-->
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+                            <h4>Our Skills</h4>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <div class="col-xl-6 mb-5">
-                  <div class="tm-contact-form-wrap">
-                    <form action="" method="POST" class="tm-contact-form">
-                        <div class="form-group">
-                          <input type="text" id="contact_name" name="contact_name" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Your Name" required="" />
-                        </div>
-                        <div class="form-group">
-                          <input type="email" id="contact_email" name="contact_email" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Your Email" required="" />
-                        </div>
+                <!-- End page header-->
 
-                        <div class="form-group">
-                          <textarea rows="4" id="contact_message" name="contact_message" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Message..." required=""></textarea>
-                        </div>
+                <!-- Begin Our Skills -->
+                <div class="our-skills">
+                	<div class="container">
+                    	<div class="row">
 
-                        <div class="form-group mb-0">
-                          <button type="submit" class="btn rounded-0 d-block ml-auto tm-btn-primary">
-                            SEND
-                          </button>
-                        </div>
-                      </form>
-                  </div>
+                        	<div class="col-sm-6">
+                                <div class="skill-bar wow slideInLeft" data-wow-delay="0.2s">
+                                    <div class="progress-lebel">
+                                        <h6>Photoshop & Illustrator</h6>
+                                    </div>
+                                    <div class="progress">
+                                      <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="skill-bar wow slideInRight" data-wow-delay="0.2s">
+                                    <div class="progress-lebel">
+                                        <h6>Robotics</h6>
+                                    </div>
+                                    <div class="progress">
+                                      <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="skill-bar wow slideInLeft" data-wow-delay="0.4s">
+                                    <div class="progress-lebel">
+                                        <h6>Mathematics</h6>
+                                    </div>
+                                    <div class="progress">
+                                      <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="skill-bar wow slideInRight" data-wow-delay="0.4s">
+                                    <div class="progress-lebel">
+                                        <h6>Drawing</h6>
+                                    </div>
+                                    <div class="progress">
+                                      <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> <!-- /.row -->
+                    </div> <!-- /.container -->
                 </div>
-              </section>
-          </div>
-        </main>
-      </div>
-    </div>
-    <script src="static/js/jquery.min.js"></script>
-    <script src="static/js/jquery.singlePageNav.min.js"></script>
-    <script src="static/js/parallax.min.js"></script>
-    <script src="static/slick/slick.min.js"></script>
-    <script src="static/js/jquery.magnific-popup.min.js"></script>
-    <script src="static/js/templatemo-scripts.js"></script>
-  </body>
+                <!-- End Our Skill -->
+          </section>
+          <!-- End about section -->
+            <!-- Begin Services -->
+            <section id="services-section" class="page text-center">
+                <!-- Begin page header-->
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                            <h2>Services</h2>
+                            <div class="devider"></div>
+                            <p class="subtitle">what we really know how</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End page header-->
+
+                <!-- Begin roatet box-2 -->
+                <div class="rotate-box-2-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0">
+                                    <span class="rotate-box-icon"><i class="fa fa-mobile"></i></span>
+                                    <div class="rotate-box-info">
+                                        <h4>Arduino</h4>
+                                        <p>Arduino programming for kids is the perfect way to introduce children to a whole new world of electronics and technology.</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6">
+                                <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.2s">
+                                    <span class="rotate-box-icon"><i class="fa fa-pie-chart"></i></span>
+                                    <div class="rotate-box-info">
+                                        <h4>Photoshop and illustrator</h4>
+                                        <p>Photoshop is the industry standard for most digital illustration found in children’s books. However, the trick is to 'do' digital illustration without it looking digital.</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6">
+                                <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.4s">
+                                    <span class="rotate-box-icon"><i class="fa fa-cloud"></i></span>
+                                    <div class="rotate-box-info">
+                                        <h4>intelligence activities</h4>
+                                        <p>Emotional intelligence is your ability to recognize and understand emotions in yourself and others, and your ability to use this awareness to manage your behavior and relationships.</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6">
+                                <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.6s">
+                                    <span class="rotate-box-icon"><i class="fa fa-pencil"></i></span>
+                                    <div class="rotate-box-info">
+                                        <h4>Digital painting</h4>
+                                        <p>Piland encourage kids to do digital drawing.</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div> <!-- /.row -->
+                    </div> <!-- /.container -->
+                </div>
+            </section>
+            <!-- End Services -->
+
+
+
+
+            <!-- Begin testimonials -->
+            <section id="testimonial-section">
+                <div id="testimonial-trigger" class="testimonial text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(static/img/testimonial-bg.jpg);">
+                    <div class="cover"></div>
+                    <!-- Begin page header-->
+                    <div class="page-header-wrapper">
+                        <div class="container">
+                            <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                                <h2>Reviews</h2>
+                                <div class="devider"></div>
+                                <p class="subtitle">What people say about us</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End page header-->
+                    <div class="container">
+                        <div class="testimonial-inner center-block text-center">
+                            <div id="owl-testimonial" class="owl-carousel">
+                                <div class="item">
+                                    <blockquote>
+                                        <p>"This was my first experience with that team and outperformed my expectation! They know there stuff and I highly recommend them! A+++".</p>
+                                        <footer><cite title="Source Title">Daryl Hodgeman</cite></footer>
+                                    </blockquote>
+                                </div>
+                                <div class="item">
+                                    <blockquote>
+                                        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua."</p>
+                                        <footer><cite title="Source Title">John Doe</cite></footer>
+                                    </blockquote>
+                                </div>
+                                <div class="item">
+                                    <blockquote>
+                                        <p>"Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                        proident, sunt in culpa qui officia deserunt mollit".</p>
+                                        <footer><cite title="Source Title">John Doe</cite></footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End testimonials -->
+            <!-- Begin social section -->
+			<section id="social-section">
+
+                 <!-- Begin page header-->
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                            <h2>Join Us</h2>
+                            <div class="devider"></div>
+                            <p class="subtitle">Follow us on social networks</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End page header-->
+
+                <div class="container">
+                	<ul class="social-list">
+                		<li> <a href="https://www.facebook.com/Piland-267949197424334" class="rotate-box-1 square-icon text-center wow zoomIn" data-wow-delay="0.3s"><span class="rotate-box-icon"><i class="fa fa-facebook"></i></span></a></li>
+                    </ul>
+                </div>
+
+            </section>
+            <!-- End social section -->
+
+
+
+
+            <!-- Begin contact section -->
+			<section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/map-bg.jpg);">
+            <div class="cover"></div>
+
+                 <!-- Begin page header-->
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                            <h2>Contacts</h2>
+                            <div class="devider"></div>
+                            <p class="subtitle">All to contact us</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End page header-->
+
+                <div class="contact wow bounceInRight" data-wow-delay="0.4s">
+                    <div class="container">
+                    	<div class="row">
+
+                            <div class="col-sm-6">
+                                <div class="contact-info">
+                                    <h4>Our Address</h4>
+                                    <ul class="contact-address">
+			                            <li><i class="fa fa-map-marker fa-lg"></i>&nbsp;
+Technopark Elgazala,<br><br>&nbsp;    B11 innovation center 2088 Ariana,<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tunisie</li>
+			                            <li><i class="fa fa-phone"></i>&nbsp; 27 089 043</li>
+			                            <li><i class="fa fa-envelope"></i>http://piland.tn/</li>
+			                        </ul>
+                                </div>
+                            </div>
+
+                        	<div class="col-sm-6">
+                                <div class="contact-form">
+                                	<h4>Write to us</h4>
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control input-lg" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control input-lg" placeholder="E-mail" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control input-lg" placeholder="Subject" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-control input-lg" rows="5" placeholder="Message" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn wow bounceInRight" data-wow-delay="0.8s">Send</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div> <!-- /.row -->
+                    </div> <!-- /.container -->
+                </div>
+            </section>
+            <!-- End contact section -->
+
+
+
+
+            <!-- Begin footer -->
+            <footer class="text-off-white">
+
+                <div class="footer-top">
+                	<div class="container">
+
+                <div class="footer">
+                    <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
+                        <p class="copyright">Copyright &copy; 2021 - Designed By <a href="http://piland.tn/" class="theme-author">Piland</a> &amp; Developed by <a href="http://piland.tn/" class="theme-author">Piland Team</a></p>
+                    </div>
+                </div>
+
+            </footer>
+            <!-- End footer -->
+
+            <a href="#" class="scrolltotop"><i class="fa fa-arrow-up"></i></a> <!-- Scroll to top button -->
+
+        </div><!-- body ends -->
+
+
+
+
+        <!-- Plugins JS -->
+		<script src="static/inc/jquery/jquery-1.11.1.min.js"></script>
+		<script src="static/inc/bootstrap/js/bootstrap.min.js"></script>
+		<script src="static/inc/owl-carousel/js/owl.carousel.min.js"></script>
+		<script src="static/inc/stellar/js/jquery.stellar.min.js"></script>
+		<script src="static/inc/animations/js/wow.min.js"></script>
+        <script src="static/inc/waypoints.min.js"></script>
+		<script src="static/inc/isotope.pkgd.min.js"></script>
+		<script src="static/inc/classie.js"></script>
+		<script src="static/inc/jquery.easing.min.js"></script>
+		<script src="static/inc/jquery.counterup.min.js"></script>
+		<script src="static/inc/smoothscroll.js"></script>
+
+		<!-- Theme JS -->
+		<script src="static/js/theme.js"></script>
+
+    </body>
+
+
 </html>
-  <style>
-*{
-  padding:0px;
-  margin:0px;
-  box-sizing:border-box;
-  outline:none;
-}
-body{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:100vh;
-  background-color:#454342
-}
-#neonShadow{
-  height:50px;
-  width:100px;
-  border:none;
-  border-radius:50px;
-  transition:0.3s;
-  background-color:rgba(156, 161, 160,0.3);
-  animation: glow 1s infinite ;
-  transition:0.5s;
-}
-#anim{
-    display: block;
-    width: 100%;
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    padding-top: 15%;
-    padding-right: 2.5%;
-    margin-right: 0px;
-    font-size: 1.2rem;
-    transition: 0.3s;
-    opacity: 0;
-    }
-span:hover{
-    transition: 0.3s;
-    opacity: 1;
-    font-weight: 700;
-    }
-
-#neonShadow:hover{
-  transform:translateX(-20px)rotate(30deg);
-  border-radius:5px;
-  background-color:#c3bacc;
-  transition:0.5s;
-}
-
-@keyframes glow{
-  0%{
-  box-shadow: 5px 5px 20px rgb(93, 52, 168),-5px -5px 20px rgb(93, 52, 168);}
-
-  50%{
-  box-shadow: 5px 5px 20px rgb(81, 224, 210),-5px -5px 20px rgb(81, 224, 210)
-  }
-  100%{
-  box-shadow: 5px 5px 20px rgb(93, 52, 168),-5px -5px 20px rgb(93, 52, 168)
-  }
-}
-
-
-  </style>
-{% endblock %}

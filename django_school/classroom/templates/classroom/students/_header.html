@@ -18,7 +18,9 @@
           <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" alt="User picture">
         </div>
         <div class="user-info">
+           <a href="{% url 'students:profile' %}">
             <strong>{{ user.username }}</strong>
+           </a>
           </span>
           <span class="user-role">Student</span>
           <span class="user-status">
@@ -71,7 +73,7 @@
             <span>Games</span>
           </li>
           <li>
-             <a>
+            <a href="{% url 'students:xogame' %}">
               <i class="fa fa-book"></i>
               <span>X/O</span>
               <span class="badge badge-pill badge-primary">Beta</span>
@@ -615,18 +617,6 @@ $("#show-sidebar").click(function() {
 
 
 </script>
-
-
-  <style>
-    .rw-conversation-container .rw-header {
-    background-color: #070775;
-    }
-    .rw-messages-container .rw-message .rw-client{
-    background-color: #070775;
-    }
-    .rw-launcher {
-    background-color: #070775;}
-  </style>
 
   <div class="chat-container"></div>
   <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"/></script>

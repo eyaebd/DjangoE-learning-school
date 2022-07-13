@@ -90,3 +90,20 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: piland
+  examples: |
+    - who are you?
+    - who are piland?
+    - piland?
+    - who piland?
+
+- intent: math
+  examples: |
+    - math
+
+- intent: science
+  examples: |
+    - science
+
+

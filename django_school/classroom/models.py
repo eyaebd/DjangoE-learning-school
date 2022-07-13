@@ -1,11 +1,12 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.html import escape, mark_safe
-
+from django.conf import settings
 
 class User(AbstractUser):
     is_student = models.BooleanField(default=False)
     is_teacher = models.BooleanField(default=False)
+    is_parent = models.BooleanField(default=False)
 
 
 class Subject(models.Model):
@@ -78,3 +79,23 @@ class TakenQuiz(models.Model):
 class StudentAnswer(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE, related_name='quiz_answers')
     answer = models.ForeignKey(Answer, on_delete=models.CASCADE, related_name='+')
+
+class UserProfile(models.Model):
+
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    description = models.CharField(max_length=100, default='')
+
+    city = models.CharField(max_length=100, default='')
+    phoneNumber = models.IntegerField(default=0)
+    age = models.IntegerField(default=0)
+    image = models.ImageField(upload_to='profile_image', blank=True)
+
+    def __str__(self):
+        return self.user.username
+
+
+def createProfile(sender, **kwargs):
+    if kwargs['created']:
+        user_profile = UserProfile.objects.created(user=kwargs['instance'])
+
+    post_save.connect(createProfile, sender=User)

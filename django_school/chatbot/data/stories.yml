@@ -9,6 +9,7 @@ stories:
   - intent: mood_great
   - action: utter_happy
 
+
 - story: sad path 1
   steps:
   - intent: greet
@@ -28,3 +29,15 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: piland presentation path
+  steps:
+  - intent: piland
+  - action: utter_piland
+
+- story: e-learn path
+  steps:
+  - intent: math
+  - action: utter_math
+  - intent: science
+  - action: utter_science

@@ -15,7 +15,18 @@ from django.views import View
 from ..decorators import student_required
 from ..forms import StudentInterestsForm, StudentSignUpForm, TakeQuizForm
 from ..models import Quiz, Student, TakenQuiz, Question
+from django.views.generic import TemplateView
 
+from django.shortcuts import render, redirect
+from classroom.forms import (EditProfileForm, ProfileForm)
+from django.contrib.auth.decorators import login_required
+from django.http.response import JsonResponse, HttpResponse
+from django.views.decorators.http import require_GET, require_POST
+from django.shortcuts import get_object_or_404
+from django.contrib.auth.models import User
+from django.views.decorators.csrf import csrf_exempt
+from webpush import send_user_notification
+import json
 User = get_user_model()
 
 class StudentSignUpView(CreateView):
@@ -170,4 +181,27 @@ class StudentList(ListView):
             queryset = queryset.filter(user__username__icontains = query)
         return queryset
 
-    
+
+class GameView(TemplateView):
+    template_name = 'classroom/students/xogame.html'
+
+@login_required
+def Updateprofile(request):
+    if request.method == 'POST':
+        form = EditProfileForm(request.POST, instance=request.user)
+        profile_form = ProfileForm(request.POST, request.FILES, instance=request.user)
+        if form.is_valid() and profile_form.is_valid():
+            user_form = form.save()
+            custom_form = profile_form.save(False)
+            custom_form.user = user_form
+            custom_form.save()
+            return redirect('/')
+    else:
+        form = EditProfileForm(instance=request.user)
+        profile_form = ProfileForm(instance=request.user)
+        args = {}
+        # args.update(csrf(request))
+        args['form'] = form
+        args['profile_form'] = profile_form
+        return render(request, 'classroom/students/profile.html', args)
+

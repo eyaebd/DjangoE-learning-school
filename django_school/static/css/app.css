@@ -57,6 +57,19 @@ footer a {
   border-color: #66598B;
 }
 
+.btn-parent {
+  color: #fff;
+  background-color: #FFDAC1;
+  border-color: #FFDAC1;
+}
+
+.btn-parent:hover,
+.btn-parent:active {
+  color: #fff;
+  background-color: #FFDAC1;
+  border-color: #FFDAC1;
+}
+
 .has-danger .radio,
 .has-danger .checkbox {
   color: #dc3545;
@@ -64,4 +77,13 @@ footer a {
 
 .has-danger .invalid-feedback {
   display: block;
+}
+
+.show .dropdown-toggle:after {
+    transform: rotate(180deg);
+}
+
+.dropdown-toggle:after {
+    will-change: transform;
+    transition: transform .15s linear;
 }

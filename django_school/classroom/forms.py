@@ -2,10 +2,10 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.db import transaction
 from django.forms.utils import ValidationError
-
+from .models import UserProfile
 from classroom.models import (Answer, Question, Student, StudentAnswer,
                               Subject, User)
-
+from django.forms import ModelForm
 
 class TeacherSignUpForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
@@ -14,6 +14,17 @@ class TeacherSignUpForm(UserCreationForm):
     def save(self, commit=True):
         user = super().save(commit=False)
         user.is_teacher = True
+        if commit:
+            user.save()
+        return user
+
+class ParentSignUpForm(UserCreationForm):
+    class Meta(UserCreationForm.Meta):
+        model = User
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.is_parent = True
         if commit:
             user.save()
         return user
@@ -83,3 +94,16 @@ class TakeQuizForm(forms.ModelForm):
         question = kwargs.pop('question')
         super().__init__(*args, **kwargs)
         self.fields['answer'].queryset = question.answers.order_by('text')
+
+class EditProfileForm(ModelForm):
+    class Meta:
+        model = User
+        fields = (
+                 'email',
+                 'first_name',
+                 'last_name'
+                )
+class ProfileForm(ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ('city', 'description', 'phoneNumber','age', 'image')
