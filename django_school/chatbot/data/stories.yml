@@ -30,10 +30,6 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: piland presentation path
-  steps:
-  - intent: piland
-  - action: utter_piland
 
 - story: e-learn path
   steps:
@@ -41,3 +37,25 @@ stories:
   - action: utter_math
   - intent: science
   - action: utter_science
+
+
+- story: e-learning
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: math
+  - action: utter_math
+  - intent: correct
+  - action: utter_correct
+
+- story: e-learning 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: math
+  - action: utter_math
+  - intent: math
+  - action: utter_math
+  - intent: correct
+  - action: utter_correct
+

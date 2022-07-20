@@ -8,7 +8,6 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - piland
   - math
   - science
 
@@ -17,7 +16,7 @@ responses:
   - text: "Hey! what would you prefer:"
     buttons:
       - title: "About us"
-        payload: "piland"
+        payload: "E-learning"
 
       - title: "math"
         payload: "math"
@@ -40,8 +39,6 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-  utter_piland:
-  - text: "piland is a pi story technology for kids"
 
   utter_math:
   - text: "what's the result of 160+5"
@@ -54,6 +51,7 @@ responses:
 
       - title: "180"
         payload: "math"
+
 
   utter_science:
   - text: "Which of the following is not a blood type?"

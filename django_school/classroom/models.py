@@ -6,7 +6,6 @@ from django.conf import settings
 class User(AbstractUser):
     is_student = models.BooleanField(default=False)
     is_teacher = models.BooleanField(default=False)
-    is_parent = models.BooleanField(default=False)
 
 
 class Subject(models.Model):

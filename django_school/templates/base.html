@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{% block title %}Piland School{% endblock %}</title>
+    <title>{% block title %}E-learning for kids{% endblock %}</title>
     <link rel="icon" href="{% static 'img/favicon.png' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'vendor/fontello-2f186091/css/fontello.css' %}">
@@ -16,8 +16,6 @@
 
     {% if user.is_authenticated and user.is_teacher %}
       <link rel="stylesheet" type="text/css" href="{% static 'css/teachers.css' %}">
-    {% elif user.is_authenticated and user.is_parent %}
-      <link rel="stylesheet" type="text/css" href="{% static 'css/parents.css' %}">
     {% else %}
       <link rel="stylesheet" type="text/css" href="{% static 'css/students.css' %}">
     {% endif %}
@@ -35,8 +33,6 @@
                   {% if user.is_authenticated %}
                     {% if user.is_teacher %}
                       <span class="icon-feather" data-toggle="tooltip" data-placement="right" title="Teacher profile"></span>
-                    {% elif user.is_parent %}
-                      <span class="icon-graduation-cap" data-toggle="tooltip" data-placement="right" title="Parent profile"></span>
                     {% else %}
                       <span class="icon-graduation-cap" data-toggle="tooltip" data-placement="right" title="Student profile"></span>
                     {% endif %}

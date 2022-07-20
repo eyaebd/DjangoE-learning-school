@@ -25,7 +25,7 @@ while bot_message != "Bye" or bot_message != 'thanks':
         continue
     print("Sending message now...")
 
-    r = requests.post('http://localhost:5002/webhooks/rest/webhook', json={"message": message})
+    r = requests.post('http://localhost:5005/webhooks/rest/webhook', json={"message": message})
 
     print("Bot says, ", end=' ')
     for i in r.json():

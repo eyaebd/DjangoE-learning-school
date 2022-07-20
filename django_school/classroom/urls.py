@@ -1,5 +1,5 @@
 from django.urls import include, path
-from .views import classroom, students, teachers, parents
+from .views import classroom, students, teachers
 from .views.students import Updateprofile
 
 urlpatterns = [
@@ -27,8 +27,4 @@ urlpatterns = [
         path('quiz/<int:quiz_pk>/question/<int:question_pk>/delete/', teachers.QuestionDeleteView.as_view(), name='question_delete'),
     ], 'classroom'), namespace='teachers')),
 
-    path('parents/', include(([
-     path('', parents.QuizListView.as_view(), name='quiz_change_list'),
-     path('quiz/<int:pk>/results/', parents.QuizResultsView.as_view(),name='quiz_results'),
-     ], 'classroom'), namespace='parents')),
 ]

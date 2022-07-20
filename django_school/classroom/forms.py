@@ -18,17 +18,6 @@ class TeacherSignUpForm(UserCreationForm):
             user.save()
         return user
 
-class ParentSignUpForm(UserCreationForm):
-    class Meta(UserCreationForm.Meta):
-        model = User
-
-    def save(self, commit=True):
-        user = super().save(commit=False)
-        user.is_parent = True
-        if commit:
-            user.save()
-        return user
-
 
 class StudentSignUpForm(UserCreationForm):
     interests = forms.ModelMultipleChoiceField(
